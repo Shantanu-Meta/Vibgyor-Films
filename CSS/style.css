@@ -312,6 +312,67 @@ a:active {
   flex-grow: 1;
 }
 
-/* .profile__about a {
-  font-size: inherit;
-} */
+/* FOOTER */
+
+.footer {
+  background-color: var(--BGCOLOR-FADE);
+  margin: var(--MARGIN-SECTION-TB) 0 0 0;
+  padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: var(--PADDING-TOP-BOTTOM) 0;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.footer__info > div {
+  flex-grow: 1;
+}
+
+.footer__connection,
+.footer__img-title {
+  text-align: start;
+}
+
+.footer__img-title img {
+  width: clamp(16px, 15vw, 50px);
+  border-radius: 50%;
+}
+
+.footer__navigation li {
+  margin: 0.5em 0 0 0;
+  font-weight: bold;
+}
+
+.social-handle ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__connection img {
+  width: clamp(35px, 4vh, 150px);
+  height: auto;
+}
+
+.footer__img-title h3 {
+  background-image: var(--BG-IMAGE-CLIP);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#footer__copyright {
+  color: grey;
+  display: block;
+  margin: var(--MARGIN-SECTION-TB) 0 0 0;
+}
