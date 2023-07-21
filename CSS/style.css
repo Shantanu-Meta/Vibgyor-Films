@@ -114,7 +114,7 @@ a:active {
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: var(--HEADER-BG-COLOR);
 }
 
@@ -391,12 +391,14 @@ a:active {
 
 .contact {
   margin: var(--MARGIN-SECTION-TB) var(--MARGIN);
+  padding: 0 0 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: normal;
   row-gap: 2em;
   min-height: calc(100vh - 20rem);
+  box-shadow: var(--SECTION-BS);
 }
 
 .contact--fs-lg {
@@ -422,6 +424,15 @@ a:active {
 }
 .contact__socials img {
   width: clamp(40px, 8vh, 150px);
+}
+
+.map {
+  margin: var(--MARGIN-SECTION-TB) var(--MARGIN);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: normal;
+  row-gap: 2em;
 }
 
 /* Explore */
@@ -502,7 +513,12 @@ a:active {
   width: 90%;
   margin: 5px auto;
   text-align: center;
-  background-color: rgba(73, 71, 71, 0.254);
+  color: white;
+  background-image: linear-gradient(to right, #ff000000, rgb(114 9 9 / 54%));
+}
+.right-container .services-info {
+  color: white;
+  background-image: linear-gradient(to left, #ff000000, rgb(114 9 9 / 54%));
 }
 
 .left-container {
@@ -513,6 +529,26 @@ a:active {
   left: 50%;
 }
 
+.container .service-img {
+  width: clamp(35px, 4vh, 150px);
+  height: clamp(35px, 4vh, 150px);
+  position: absolute;
+  right: -50px;
+  top: 5px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.container .service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+}
+
+.right-container .service-img {
+  left: -50px;
+}
+
 .sevices__timeline::after {
   content: "";
   position: absolute;
@@ -520,7 +556,9 @@ a:active {
   left: 50%;
   width: 2px;
   height: 100%;
+  margin-left: -1px;
   background-color: #fff;
+  z-index: -1;
 }
 
 .left-container-arrow {
@@ -528,11 +566,11 @@ a:active {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 10px solid red;
+  border-left: 10px solid rgb(114 9 9 / 54%);
   position: absolute;
   top: 5px;
   right: -10px;
-  z-index: -1;
+  z-index: -10;
 }
 
 .right-container-arrow {
@@ -540,7 +578,7 @@ a:active {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 10px solid red;
+  border-right: 10px solid rgb(114 9 9 / 54%);
   position: absolute;
   top: 5px;
   left: -10px;
