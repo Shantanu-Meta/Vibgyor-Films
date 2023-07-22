@@ -40,6 +40,8 @@ ul {
   --LINK_ACTIVE: #534949;
   --HEADER-BG-COLOR: #000000;
   --BOX_SHADOW: grey;
+  --GRADIENT-COLOR: rgb(114, 9, 9);
+  --BLACK-LOW-OPACITY: #ff000000;
 
   /* BORDERS */
   --BORDER: 1px solid var(--BORDER);
@@ -206,8 +208,9 @@ a:active {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   flex-flow: row wrap;
+  overflow: hidden;
 }
 
 .galary1__div {
@@ -483,20 +486,21 @@ a:active {
 }
 
 /* ABOUT PAGE */
+
 .services__info i {
   padding: 5px 10px;
-  color: white;
+  color: var(--UNIVERSAL-FONT-COLOR);
   background-image: linear-gradient(
     to right,
     var(--LINK_COLOR),
-    rgb(114, 9, 9)
+    var(--GRADIENT-COLOR)
   );
   border-radius: 10px;
 }
 
 .sevices__timeline {
   position: relative;
-  font-size: clamp(12px, 2vw, 1rem);
+  font-size: clamp(16px, 2vw, 1rem);
   font-weight: 500;
 }
 
@@ -513,12 +517,20 @@ a:active {
   width: 90%;
   margin: 5px auto;
   text-align: center;
-  color: white;
-  background-image: linear-gradient(to right, #ff000000, rgb(114 9 9 / 54%));
+  color: var(--UNIVERSAL-FONT-COLOR);
+  background-image: linear-gradient(
+    to right,
+    var(--BLACK-LOW-OPACITY),
+    var(--GRADIENT-COLOR)
+  );
 }
 .right-container .services-info {
-  color: white;
-  background-image: linear-gradient(to left, #ff000000, rgb(114 9 9 / 54%));
+  color: var(--UNIVERSAL-FONT-COLOR);
+  background-image: linear-gradient(
+    to left,
+    var(--BLACK-LOW-OPACITY),
+    var(--GRADIENT-COLOR)
+  );
 }
 
 .left-container {
@@ -557,7 +569,7 @@ a:active {
   width: 2px;
   height: 100%;
   margin-left: -1px;
-  background-color: #fff;
+  background-image: var(--BG-IMAGE-CLIP);
   z-index: -1;
 }
 
@@ -566,7 +578,7 @@ a:active {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 10px solid rgb(114 9 9 / 54%);
+  border-left: 10px solid var(--GRADIENT-COLOR);
   position: absolute;
   top: 5px;
   right: -10px;
@@ -578,7 +590,7 @@ a:active {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 10px solid rgb(114 9 9 / 54%);
+  border-right: 10px solid var(--GRADIENT-COLOR);
   position: absolute;
   top: 5px;
   left: -10px;
